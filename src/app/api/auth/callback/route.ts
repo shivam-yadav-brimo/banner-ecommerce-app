@@ -4,7 +4,7 @@ import crypto from 'crypto';
 
 const SHOPIFY_API_KEY = process.env.SHOPIFY_API_KEY!;
 const SHOPIFY_API_SECRET = process.env.SHOPIFY_API_SECRET!;
-const REDIRECT_URI = 'https://banner-shopify-app.vercel.app/api/auth/callback';
+const REDIRECT_URI = 'https://banner-ecommerce-app.vercel.app/api/auth/callback';
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
@@ -50,5 +50,5 @@ export async function GET(request: Request) {
   console.log('Access token:', tokenData.access_token);
 
   // ✅ Redirect back to your dashboard
-  return NextResponse.redirect(`https://banner-shopify-app.vercel.app/dashboard?shop=${shop}`);
+  return NextResponse.redirect(`https://banner-ecommerce-app.vercel.app/client/dashboard?shop=${shop}`);
 }
