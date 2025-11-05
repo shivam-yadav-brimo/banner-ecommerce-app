@@ -2,8 +2,8 @@
 import { NextResponse } from 'next/server';
 
 const SHOPIFY_API_KEY = process.env.SHOPIFY_API_KEY!;
-const SCOPES = 'read_products,write_products'; // Example scopes
-const REDIRECT_URI = 'https://your-app.vercel.app/api/auth/callback';
+const SCOPES = 'read_customers,read_script_tags'; // Example scopes
+const REDIRECT_URI = 'https://banner-ecommerce-app.vercel.app/api/auth/callback';
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
